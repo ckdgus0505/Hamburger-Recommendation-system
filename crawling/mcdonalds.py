@@ -12,15 +12,13 @@ menus = table.find_all(class_="product-title")
 prices = table.find_all(class_="starting-price")
 kcal = table.find_all(class_="text-default")
 
-for menu in menus:
+for menu, price, cal in zip(menus, prices, kcal):
 				name = menu.get_text()
 				print(name)
 
-for price in prices:
 				pri = price.get_text()
 				print(pri)
 				
-for cal in kcal:
 				c = cal.get_text()
 				print(c)
 
